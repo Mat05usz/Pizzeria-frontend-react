@@ -2,12 +2,9 @@ import "../styles/contact.scss";
 import SectionTitle from "./SectionTitle";
 
 function Contact() {
-
-    const handleSubmit = (e : React.FormEvent) =>
-    {
-        e.preventDefault();
-    }
-
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+  };
 
   return (
     <>
@@ -42,19 +39,23 @@ function Contact() {
           </div>
         </div>
         <div className="contact-form">
-          <form onSubmit={(e) => {handleSubmit(e)}}>
-              <input type="text" placeholder="Name" />
-              <input type="text" placeholder="Second name" />
-              <input type="email" placeholder="E-mail" />
-              <input type="tel" placeholder="Telephone number" />
-              <input type="text" placeholder="Number of people" />
-              <input className="date" type="date" />
-              <textarea
-                className="additional-information"
-                rows={4}
-                placeholder="Additional information"
-              ></textarea>
-              <input className="submit-button" type="submit" value="Send"/>
+          <form
+            onSubmit={(e) => {
+              handleSubmit(e);
+            }}
+          >
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Second name" />
+            <input type="email" placeholder="E-mail" />
+            <input type="tel" placeholder="Telephone number" />
+            <input type="text" placeholder="Number of people" />
+            <input className="date" type="date" />
+            <textarea
+              className="additional-information"
+              rows={4}
+              placeholder="Additional information"
+            ></textarea>
+            <input className="submit-button" type="submit" value="Send" />
           </form>
         </div>
       </section>

@@ -1,4 +1,4 @@
-import "../styles/header.scss";
+import "../styles/nav.scss";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 
@@ -28,10 +28,7 @@ function Header() {
           clearInterval(checkIfStoppedScrolling);
         }, 50);
       } else {
-        setVisible(
-          prevScrollPos > currentScrollPos ||
-            false
-        );
+        setVisible(prevScrollPos > currentScrollPos || false);
       }
 
       setPrevScrollPos(currentScrollPos);
@@ -74,15 +71,13 @@ function Header() {
   };
 
   return (
-    <header style={{ top: visible ? "0px" : "-72px" }}>
+    <div style={{ top: visible ? "0px" : "-72px" }} className="nav-wrapper">
       <button
         className="mobile-nav-toggle"
         aria-controls="primary-navigation"
         aria-expanded="false"
         onClick={navToggleOnClick}
       ></button>
-
-            
 
       <nav>
         <ul
@@ -123,7 +118,7 @@ function Header() {
         </ul>
       </nav>
 
-     {/* <svg
+      {/* <svg
         
         viewBox="0 0 255 670"
         fill="none"
@@ -145,7 +140,7 @@ function Header() {
           <circle id="Ellipse 4" cx="116" cy="405" r="30" fill="#C4C4C4" />
         </g>
      </svg>*/}
-    </header>
+    </div>
   );
 }
 

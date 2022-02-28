@@ -1,6 +1,4 @@
 import "../styles/menucategoriesnavbar.scss";
-import { useRef } from "react";
-import RectangularButton from "./RectangularButton";
 import RectangularButtonList from "./RectangularButtonList";
 
 interface MenuNavbarProps {

@@ -35,7 +35,9 @@ export default function RectangularButtonList(
       {props.buttonNames.map((name, index) => {
         return (
           <RectangularButton
-            refToLi={index === props.whichStartsActive ? lastClicked : undefined}
+            refToLi={
+              index === props.whichStartsActive ? lastClicked : undefined
+            }
             additionalClasses={
               index === props.whichStartsActive ? ["active"] : ""
             }
