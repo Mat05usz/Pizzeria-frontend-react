@@ -1,0 +1,161 @@
+.menu-item {
+  display: flex;
+  position: relative;
+  transition: all 200ms ease;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.menu-item:hover {
+  transform: scale(1.02);
+}
+
+.menu-item-image {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.menu-item-content {
+  
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 0.75rem;
+  background-color: var(--clr-text-background);
+  row-gap: 2rem;
+  column-gap: 1rem;
+  align-items: center;
+}
+
+.menu-item-name {
+  font-size: 2rem;
+  grid-column-start: span 2;
+  justify-self: center;
+}
+
+.menu-item-price-value {
+  
+  justify-self: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  grid-column-start: span 2;
+}
+
+.menu-item-desc {
+  font-size: 0.875rem;
+  display: none;
+}
+
+.menu-item-details-button, .menu-item-order-button {
+  border-radius: 500px;
+  width: 90px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease;
+  background-color: var(--clr-accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  &:hover{
+    background-color: white;
+    color: black;
+  }
+}
+
+.menu-item-order-button {
+  width: 110px;
+  justify-self: end;
+}
+
+@media (max-width: 479px) {
+  .menu-item {
+    flex-direction: column;
+  }
+  .menu-item-image,
+  .menu-item-content {
+    align-self: center;
+  }
+}
+
+
+
+.menu-favourite-dish
+{
+  margin-bottom: 4rem;
+  & > h2{
+    color: white;
+    font-size: 3rem;
+    margin: 0 auto 2rem auto;
+    width: fit-content;
+    background-color: var(--clr-text-background);
+    padding: 0 1rem;
+  }
+}
+
+
+
+.horizontal
+{
+  flex-direction: row;
+  flex-basis: auto;
+}
+
+.favourite-dish
+{
+  .menu-item-image
+  {
+    max-width: 400px;
+  }
+  .menu-item-content
+  {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 870px)
+{
+  .horizontal
+  {
+    flex-direction: column;
+  }
+  .favourite-dish
+{
+  .menu-item-content
+  {
+    align-self: center;
+    min-width: 300px;
+  }
+  .menu-item-image
+  {
+    max-width: 313px;
+    min-width: 300px;
+  }
+}
+.menu-favourite-dish
+{
+  & > h2{
+    
+    width: min-content;
+  }
+}
+}
+
+@media (max-width: 400px)
+{
+  .menu-favourite-dish
+{
+  & > h2{
+    
+    font-size: 2.5rem;
+  }
+}
+}

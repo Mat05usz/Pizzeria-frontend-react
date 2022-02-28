@@ -1,0 +1,85 @@
+.home
+{
+  min-height: 100vh;
+
+  background-image: url('../../public/images/home-background.png');
+  background-size: cover;
+  color: white;
+  
+  
+  position: relative;
+  //padding: 6rem 0;
+  
+}
+
+
+
+.home
+{
+  *{
+    //flex-grow: 1;
+  }
+
+  .home-wrapper
+  {
+    padding-top: 72px;
+
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-around;
+  min-height: 100vh;
+  width: 100%;
+  }
+}
+
+.home-title
+{
+  font-size: 4rem;
+  font-weight: 300;
+  margin: 0 2rem;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+.home-content
+{
+  font-size: 1.5rem;
+  margin: 0 2rem;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  width: 50%;
+}
+
+.home-button
+{
+  border: 2px solid rgba(255 255 255 / 0.6);
+  border-radius: 500px;
+  transition: all 200ms ease;
+  z-index: 1;
+  cursor: pointer;
+}
+.home-button:hover
+{
+  background-color: white;
+  color: black;
+} 
+.home-button
+{
+  p
+  {
+    padding: 1.25rem 1.25rem;
+  }
+}
+
+@media (max-width: 800px)
+{
+  .home-title{
+    font-size: 2rem;
+  }
+  .home-content
+  {
+    font-size: .85rem;
+  }
+}

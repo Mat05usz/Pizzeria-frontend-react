@@ -1,0 +1,8 @@
+.not-found-wrapper
+{
+    min-height: calc(100vh - 4.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
