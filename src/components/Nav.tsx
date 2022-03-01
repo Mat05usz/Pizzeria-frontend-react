@@ -2,7 +2,7 @@ import "../styles/nav.scss";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 
-function Header() {
+function Nav() {
   let location = useLocation();
   let navigate = useNavigate();
   let primaryNavigation = useRef<any>(null);
@@ -95,18 +95,17 @@ function Header() {
           </li>
           <li
             onClick={() => {
-              handleNavClick("menu");
-            }}
-          >
-            Menu
-          </li>
-
-          <li
-            onClick={() => {
               handleNavClick("about");
             }}
           >
             About
+          </li>
+          <li
+            onClick={() => {
+              handleNavClick("menu");
+            }}
+          >
+            Menu
           </li>
           <li
             onClick={() => {
@@ -117,31 +116,8 @@ function Header() {
           </li>
         </ul>
       </nav>
-
-      {/* <svg
-        
-        viewBox="0 0 255 670"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g id="Frame 1">
-          <line
-            id="Line 2"
-            x1="117.471"
-            y1="122.007"
-            x2="115.5"
-            y2="530.007"
-            stroke="#919191"
-            stroke-width="3"
-          />
-          <circle id="Ellipse 1" cx="116" cy="96" r="30" fill="#C4C4C4" />
-          <circle id="Ellipse 2" cx="116" cy="250" r="30" fill="#C4C4C4" />
-          <circle id="Ellipse 3" cx="116" cy="560" r="30" fill="#C4C4C4" />
-          <circle id="Ellipse 4" cx="116" cy="405" r="30" fill="#C4C4C4" />
-        </g>
-     </svg>*/}
     </div>
   );
 }
 
-export default Header;
+export default Nav;

@@ -1,4 +1,4 @@
-import '../styles/main.css'
+import '../styles/main.scss'
 import MenuSection from './MenuSection'
 import Contact from './Contact';
 import Home from './Home';
