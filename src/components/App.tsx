@@ -14,7 +14,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/item/:id" element={<ItemDetailed />} />
+          <Route path="/item/:name" element={<ItemDetailed />} />
           <Route path="/addProduct" element={<AddProduct />} />
           <Route path="*" element={<NotFound />}></Route>
         </Routes>

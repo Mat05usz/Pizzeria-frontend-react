@@ -1,19 +1,17 @@
 import "../styles/menuitem.scss";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
+import { ItemDetails } from '../interfaces/ItemDetails';
 
 interface MenuItemProps {
-  additionalClasses?: string[];
   key?: number;
 
-  name: string;
-  price: number;
-  description: string;
-  image: string;
+  itemDetails: ItemDetails;
+  children?: any;
 }
 
 function MenuItem(props: MenuItemProps) {
-  const { additionalClasses } = props;
 
   const { ref, inView, entry } = useInView({
     /* Optional options */
@@ -28,31 +26,40 @@ function MenuItem(props: MenuItemProps) {
   return (
     <div
       ref={ref}
-      className={["menu-item", ...additionalClasses!].join(" ")}
+      className="menu-item"
       onClick={() => {
         //handleClicked();
       }}
     >
       <img
-        src={`data:image/jpeg;base64,${props.image}`}
+        src={`data:image/jpeg;base64,${props.itemDetails.image}`}
         alt="img"
         className="menu-item-image"
       ></img>
 
       <div className="menu-item-content">
-        <h2 className="menu-item-name">{props.name || "Margherita"}</h2>
+        <h2 className="menu-item-name">{props.itemDetails.name || "Margherita"}</h2>
 
-        <span className="menu-item-price-value">{props.price || "19.99"}$</span>
+        <span className="menu-item-price-value">{props.itemDetails.price || "19.99"}$</span>
         <p className="menu-item-desc">
           <span className="menu-item-desc-highlight">Ingredients: </span>
-          {props.description ||
+          {props.itemDetails.description ||
             `Lorem
           ipsum dolor sit amet consectetur adipisicing elit. Animi, aliquid?`}
         </p>
 
-        <div className="menu-item-details-button">
-          <p>Details</p>
-        </div>
+          {props.children ?? <div className="menu-item-details-button">
+          <Link
+            to={`/item/${props.itemDetails.name}`}
+            state={{
+              itemDetails: props.itemDetails
+            }}
+          >
+            <p>Details</p>
+          </Link>
+        </div>}
+
+        
         <div className="menu-item-order-button">
           <p>Order now!</p>
         </div>
