@@ -9,7 +9,7 @@ function MenuCategoriesContent() {
   const [itemsDetails, setItemsDetails] = useState<ItemDetails[]>([]);
 
   useLayoutEffect(() => {
-    axios.get("http://localhost:9000/product").then((items) => {
+    axios.get(`${process.env.REACT_APP_API_URL + '/product'}`).then((items) => {
       if (items) {
         
         setItemsDetails(items.data);

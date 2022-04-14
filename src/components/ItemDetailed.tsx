@@ -32,7 +32,7 @@ export default function ItemDetailed() {
     else {
       let queryPath = location.pathname; // Pathname in a form of /:category/:name
       axios
-        .get(`http://localhost:9000/product${queryPath}`)
+        .get(`${process.env.REACT_APP_API_URL + '/product' + queryPath}`)
         .then((item) => {
           if (item.data.length) {
             let itemDetails = item.data as ItemDetails;

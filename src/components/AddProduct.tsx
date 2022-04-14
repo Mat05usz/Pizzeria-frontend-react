@@ -18,16 +18,16 @@ function AddProduct() {
     formData.append("productImage", productImage, productImage.name);
 
     axios
-      .post("http://localhost:9000/product", formData, {
+      .post(`${process.env.REACT_APP_API_URL + '/product'}`, formData, {
         headers: {
           "content-type": "multipart/form-data",
         },
       })
       .then((res) => {
-        console.log(res);
+        console.log("Post response: " + res);
       })
       .catch((err) => {
-        console.log(err);
+        console.log(`${process.env.REACT_APP_API_URL}` + err);
       });
   };
 
