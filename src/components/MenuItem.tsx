@@ -39,13 +39,14 @@ function MenuItem(props: MenuItemProps) {
 
       <div className="menu-item-content">
         <h2 className="menu-item-name">{props.itemDetails.name || "Margherita"}</h2>
+        <span className="menu-item-price-value">{props.itemDetails.price || "19.99"}$</span>
         <p className="menu-item-desc">
           <span className="menu-item-desc-highlight">Ingredients: </span>
           {props.itemDetails.description ||
             `Lorem
           ipsum dolor sit amet consectetur adipisicing elit. Animi, aliquid?`}
         </p>
-        <span className="menu-item-price-value">{props.itemDetails.price || "19.99"}$</span>
+        
 
           {props.children ?? 
           <Link
@@ -61,7 +62,7 @@ function MenuItem(props: MenuItemProps) {
 
         
         <div className="menu-item-order-button">
-          <p>Order now</p>
+          <p>Order</p>
         </div>
       </div>
     </div>

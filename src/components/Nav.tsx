@@ -71,7 +71,7 @@ function Nav() {
   };
 
   return (
-    <div style={{ top: visible ? "0px" : "-72px" }} className="nav-wrapper">
+    <div style={{ top: visible || location.pathname !== "/" ? "0px" : "-72px" }} className="nav-wrapper">
       <button
         className="mobile-nav-toggle"
         aria-controls="primary-navigation"
