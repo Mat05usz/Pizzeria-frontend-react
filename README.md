@@ -8,6 +8,9 @@ to a product page where a user can see more details about a menu item they would
 Currently about 50% of planned content is in. Most of the design is done (altough it will probably be changed since I'm not really content with how the site 
 looks like) as well as a 'skeleton' for the content. It's already mostly responsive so should look fine on mobile devices.
 
+## Live
+https://pizzeria-react-frontend.herokuapp.com/
+
 ## Images
 
 Keep in mind that this is still a work in progress.
@@ -21,10 +24,6 @@ Keep in mind that this is still a work in progress.
 ![image](https://user-images.githubusercontent.com/29757616/163269442-e304b59b-bdb9-4fb3-975e-2918a666fa0c.png)
 
 ![image](https://user-images.githubusercontent.com/29757616/163269477-5d2489a5-41b0-4615-9e75-74e941204d6e.png)
-
-
-## Live
-Not deployed yet.
 
 ## Running the app
 Navigate to the main project folder and type `npm run start`.
