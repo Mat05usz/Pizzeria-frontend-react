@@ -6,6 +6,7 @@ function AddProduct() {
   const [productName, setProductName] = useState("");
   const [productPrice, setProductPrice] = useState(0);
   const [productDescription, setProductDescription] = useState("");
+  const [productCategory, setProductCategory] = useState("");
   const [productImage, setProductImage] = useState<any>(null);
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -15,6 +16,7 @@ function AddProduct() {
     formData.append("productName", productName);
     formData.append("productPrice", productPrice.toString());
     formData.append("productDescription", productDescription);
+    formData.append("productCategory", productCategory);
     formData.append("productImage", productImage, productImage.name);
 
     axios
@@ -48,6 +50,11 @@ function AddProduct() {
           type="text"
           value={productDescription}
           onChange={(e) => setProductDescription(e.target.value)}
+        />
+        <input
+          type="text"
+          value={productCategory}
+          onChange={(e) => setProductCategory(e.target.value)}
         />
         <input
           type="file"
