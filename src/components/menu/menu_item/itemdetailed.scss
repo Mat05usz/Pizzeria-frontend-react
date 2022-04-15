@@ -61,6 +61,10 @@
     justify-content: center;
     gap: 1.5rem;
   }
+  .menu-item-details-button
+  {
+    display: none;
+  }
 }
 
 @media (max-width: 910px) {

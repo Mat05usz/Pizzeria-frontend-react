@@ -2,7 +2,7 @@ import "./menuitem.scss";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
-import { ItemDetails } from '../../../interfaces/ItemDetails';
+import { ItemDetails } from "../../../interfaces/ItemDetails";
 
 interface MenuItemProps {
   key?: number;
@@ -12,7 +12,6 @@ interface MenuItemProps {
 }
 
 function MenuItem(props: MenuItemProps) {
-
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0.5,
@@ -35,21 +34,25 @@ function MenuItem(props: MenuItemProps) {
         src={`data:image/jpeg;base64,${props.itemDetails.image}`}
         alt="img"
         className="menu-item-image"
+        style={{ border: "none" }}
       ></img>
 
       <div className="menu-item-content">
-        <h2 className="menu-item-name">{props.itemDetails.name || "Margherita"}</h2>
-        <span className="menu-item-price-value">{props.itemDetails.price || "19.99"}$</span>
+        <h2 className="menu-item-name">
+          {props.itemDetails.name || "Margherita"}
+        </h2>
         <p className="menu-item-desc">
-          <span className="menu-item-desc-highlight">Ingredients: </span>
           {props.itemDetails.description ||
             `Lorem
           ipsum dolor sit amet consectetur adipisicing elit. Animi, aliquid?`}
         </p>
-        
+        <span className="menu-item-price-value">
+          {props.itemDetails.price || "19.99"}$
+        </span>
 
-          {props.children ?? 
-          <Link
+        {props.children}
+
+        <Link
             to={`/item/${props.itemDetails.name}`}
             state={{
               itemDetails: props.itemDetails
@@ -58,12 +61,11 @@ function MenuItem(props: MenuItemProps) {
           >
             <p>Details</p>
           </Link>
-        }
 
-        
         <div className="menu-item-order-button">
           <p>Order</p>
         </div>
+          
       </div>
     </div>
   );

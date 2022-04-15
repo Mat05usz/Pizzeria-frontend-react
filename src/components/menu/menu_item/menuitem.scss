@@ -6,7 +6,17 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 300px;
   gap: 1rem;
+  &::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    background-color: var(--clr-text-background);
+    z-index: -1;
+    top: 120px
+  }
 }
 
 .menu-item:hover {
@@ -15,7 +25,7 @@
 
 .menu-item-image {
   width: 100%;
-  max-width: 260px;
+  max-width: 300px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border: 2px solid white;
@@ -26,43 +36,37 @@
   color: white;
   display: flex;
   padding: 0.75rem;
-  background-color: var(--clr-text-background);
-  //align-items: flex-start;
+  //background-color: var(--clr-text-background);
   flex-wrap: wrap;
   width: 100%;
   row-gap: 1.5rem;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
+  &:hover{
+    height: 120%;
+  }
 }
 
 .menu-item-name {
   font-size: 1.5rem;
-  color: var(--clr-accent);
-
   text-align: center;
+  font-weight: 400;
 }
 
 .menu-item-price-value {
-  
-  
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: 300;
   align-self: center;
   text-align: center;
   position: relative;
-  &::before{
-    content: "";
-    position: absolute;
-    border-bottom: 1px solid white;
-    z-index: 199;
-  }
 }
 
 .menu-item-desc {
-  font-size: 0.875rem;
-  flex-basis: 100%;
+  font-size: 1rem;
   font-weight: 300;
   text-align: center;
   color: rgb(172, 172, 172);
+  font-style: italic;
 }
 
 .menu-item-details-button, .menu-item-order-button {
