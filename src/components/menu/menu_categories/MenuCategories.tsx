@@ -1,4 +1,4 @@
-import "../styles/menucategories.scss";
+import "./menucategories.scss";
 import MenuCategoriesContent from "./MenuCategoriesContent";
 import MenuCategoriesNavbar from "./MenuCategoriesNavbar";
 import { useState, useEffect } from "react";

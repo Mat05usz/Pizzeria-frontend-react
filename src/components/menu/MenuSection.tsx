@@ -1,4 +1,4 @@
-import "../menusection.scss";
+import "./menusection.scss";
 import MenuCategories from "./menu_categories/MenuCategories";
 import SectionTitle from "../section_title/SectionTitle";
 

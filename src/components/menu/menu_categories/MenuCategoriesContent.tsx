@@ -1,9 +1,9 @@
 import { useLayoutEffect } from "react";
-import "../styles/menucategoriescontent.scss";
-import MenuItem from "./MenuItem";
+import "./menucategoriescontent.scss";
+import MenuItem from "../menu_item/MenuItem";
 import { useState } from "react";
 import axios from "axios";
-import { ItemDetails } from "../interfaces/ItemDetails";
+import { ItemDetails } from "../../../interfaces/ItemDetails";
 
 function MenuCategoriesContent() {
   const [itemsDetails, setItemsDetails] = useState<ItemDetails[]>([]);

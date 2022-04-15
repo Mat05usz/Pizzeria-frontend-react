@@ -1,5 +1,5 @@
-import "../styles/about.scss";
-import SectionTitle from "./SectionTitle";
+import "./about.scss";
+import SectionTitle from "../section_title/SectionTitle";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/scss/image-gallery.scss";
 

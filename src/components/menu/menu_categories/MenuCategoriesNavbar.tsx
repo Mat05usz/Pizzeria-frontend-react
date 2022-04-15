@@ -1,5 +1,5 @@
-import "../styles/menucategoriesnavbar.scss";
-import RectangularButtonList from "./RectangularButtonList";
+import "./menucategoriesnavbar.scss";
+import RectangularButtonList from "../../rectangular_list/RectangularButtonList";
 
 interface MenuNavbarProps {
   setNavbarItemClicked: React.Dispatch<React.SetStateAction<Number>>;

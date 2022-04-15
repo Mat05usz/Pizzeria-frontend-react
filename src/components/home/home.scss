@@ -2,7 +2,7 @@
 {
   min-height: 100vh;
 
-  background-image: url('../../public/images/home-background.png');
+  background-image: url('../../../public/images/home-background.png');
   background-size: cover;
   color: white;
   
@@ -16,10 +16,6 @@
 
 .home
 {
-  *{
-    //flex-grow: 1;
-  }
-
   .home-wrapper
   {
     padding-top: 72px;
