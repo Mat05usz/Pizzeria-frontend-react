@@ -5,7 +5,7 @@
     width: 100%;
     z-index: 999;
    
-    //background-color: var(--clr-dark);
+    background-color: black;
     height: 72px;
     padding: 0 max(0.5rem, calc(50vw - 700px));
     transition: all 1s ease;
@@ -33,15 +33,22 @@
     color: white;
     display: flex;
     width: 100%;
+    
   }
   
   .primary-navigation li {
-    transition: background-color 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
     align-items: center;
     justify-content: center;
     display: flex;
     cursor: pointer;
-    padding: 0 2.5rem;
+    padding: .5rem 1.5rem;
+    border-radius: 5px;
+    &:hover, &:active
+    {
+      background-color: white;
+      color: black;
+    }
   }
 
   @media (max-width: 35em) {

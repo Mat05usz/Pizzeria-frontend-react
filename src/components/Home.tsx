@@ -3,8 +3,10 @@ import "../styles/home.scss";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { gsap } from "gsap";
+import { Link, useNavigate } from "react-router-dom";
 
 function Home() {
+  let navigate = useNavigate();
   /* const { ref, inView, entry } = useInView({
     
     threshold: 0.9,
@@ -37,7 +39,12 @@ function Home() {
           </p>
         </div>
 
-        <div className="home-button">
+        <div
+          onClick={(e) => {
+            navigate("/", { state: { navID: "menu" } });
+          }}
+          className="home-button"
+        >
           <p>Check our menu!</p>
         </div>
       </div>
