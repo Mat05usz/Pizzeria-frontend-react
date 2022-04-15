@@ -1,4 +1,4 @@
-import '../styles/menutextcontent.scss';
+import './menutextcontent.scss';
 
 
 function MenuTextContent()

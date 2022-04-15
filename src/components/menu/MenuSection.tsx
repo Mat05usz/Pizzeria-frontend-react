@@ -1,6 +1,6 @@
 import "../menusection.scss";
 import MenuCategories from "./menu_categories/MenuCategories";
-import SectionTitle from "../SectionTitle";
+import SectionTitle from "../section_title/SectionTitle";
 
 function MenuSection() {
   return (

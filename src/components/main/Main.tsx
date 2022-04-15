@@ -1,11 +1,11 @@
-import '../styles/main.scss'
-import MenuSection from './MenuSection'
-import Contact from './Contact';
-import Home from './Home';
-
+import './main.scss'
+import MenuSection from '../menu/MenuSection'
+import Contact from '../contact/Contact';
+import Home from '../home/Home';
+import About from '../about/About';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-import About from './About';
+
 
 interface CustomizedState {
     navID: string

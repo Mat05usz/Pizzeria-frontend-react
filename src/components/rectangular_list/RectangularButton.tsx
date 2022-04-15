@@ -1,5 +1,5 @@
 import { MutableRefObject } from "react";
-import "../styles/rectangularbutton.scss";
+import "./rectangularbutton.scss";
 
 interface RectangularButtonProps {
   refToLi?: MutableRefObject<HTMLLIElement | null>;

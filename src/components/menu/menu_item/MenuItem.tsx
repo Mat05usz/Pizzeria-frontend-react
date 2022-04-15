@@ -1,8 +1,8 @@
-import "../styles/menuitem.scss";
+import "./menuitem.scss";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
-import { ItemDetails } from '../interfaces/ItemDetails';
+import { ItemDetails } from '../../../interfaces/ItemDetails';
 
 interface MenuItemProps {
   key?: number;

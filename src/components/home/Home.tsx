@@ -1,4 +1,4 @@
-import "../styles/home.scss";
+import "./home.scss";
 
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";

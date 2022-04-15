@@ -1,5 +1,5 @@
-import "../styles/contact.scss";
-import SectionTitle from "./SectionTitle";
+import "./contact.scss";
+import SectionTitle from "../section_title/SectionTitle";
 
 function Contact() {
   const handleSubmit = (e: React.FormEvent) => {

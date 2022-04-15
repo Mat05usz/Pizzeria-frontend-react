@@ -1,10 +1,10 @@
-import { useEffect, useLayoutEffect } from "react";
+import { useLayoutEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import "../styles/menuitem.scss";
-import "../styles/itemdetailed.scss";
-import RectangularButtonList from "./RectangularButtonList";
-import { ItemDetails } from "../interfaces/ItemDetails";
+import "./menuitem.scss";
+import "./itemdetailed.scss";
+import RectangularButtonList from "../../rectangular_list/RectangularButtonList";
+import { ItemDetails } from "../../../interfaces/ItemDetails";
 import axios from "axios";
 import MenuItem from "./MenuItem";
 

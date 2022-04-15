@@ -1,4 +1,4 @@
-import "../styles/nav.scss";
+import "./nav.scss";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 
