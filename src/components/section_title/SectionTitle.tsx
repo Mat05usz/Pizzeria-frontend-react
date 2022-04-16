@@ -7,7 +7,7 @@ interface SectionTitleProps {
 
 function SectionTitle(props: SectionTitleProps) {
   const { text, backgroundImg } = props;
-  const defaultImg = "images/restaurant01.png";
+  const defaultImg = "images/section_title_background.png";
 
   return (
     <div
@@ -15,16 +15,24 @@ function SectionTitle(props: SectionTitleProps) {
       style={{
         backgroundImage:
           window.innerWidth > 800
-            ? backgroundImg !== undefined
-              ? `url(${backgroundImg})`
-              : `url(${defaultImg})`
-            : "none",
+            ? `url(${defaultImg})`
+            : 'none'  
       }}
     >
-      <div className="gradient"></div>
+   <div className="gradient"></div>
+
       <h2>{text}</h2>
     </div>
   );
 }
 
 export default SectionTitle;
+
+/*style={{
+        backgroundImage:
+          window.innerWidth > 800
+            ? backgroundImg !== undefined
+              ? `url(${backgroundImg})`
+              : `url(${defaultImg})`
+            : "none",
+      }}*/

@@ -1,5 +1,5 @@
 import "./menuitem.scss";
-import { useEffect } from "react";
+import { useEffect, useRef, MutableRefObject } from 'react';
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import { ItemDetails } from "../../../interfaces/ItemDetails";
@@ -18,6 +18,8 @@ function MenuItem(props: MenuItemProps) {
     triggerOnce: true,
   });
 
+  let buttonRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     //gsap.fromTo('.menu-item', {bottom: "-50", opacity:"0"}, {bottom: "0", opacity:"1", duration: "2"});
   }, [inView]);
@@ -26,8 +28,13 @@ function MenuItem(props: MenuItemProps) {
     <div
       ref={ref}
       className="menu-item"
-      onClick={() => {
-        //handleClicked();
+      onMouseOver={() => {
+        if(buttonRef.current)
+          buttonRef.current.style.display = "block"; 
+      }}
+      onMouseLeave={()=>{
+        if(buttonRef.current)
+          buttonRef.current.style.display = "none"; 
       }}
     >
       <img
@@ -52,7 +59,7 @@ function MenuItem(props: MenuItemProps) {
 
         {props.children}
 
-        <Link
+        {/*<Link
             to={`/item/${props.itemDetails.name}`}
             state={{
               itemDetails: props.itemDetails
@@ -60,9 +67,10 @@ function MenuItem(props: MenuItemProps) {
             className="menu-item-details-button"
           >
             <p>Details</p>
-          </Link>
+          </Link>*/
+}
 
-        <div className="menu-item-order-button">
+        <div ref={buttonRef} className="menu-item-order-button">
           <p>Order</p>
         </div>
           

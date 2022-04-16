@@ -17,6 +17,7 @@
     z-index: -1;
     top: 120px
   }
+  z-index: 1;
 }
 
 .menu-item:hover {
@@ -92,8 +93,12 @@
   border: 1px solid var(--clr-accent);
 }
 .menu-item-order-button {
-  justify-self: end;
+  align-self: center;
   background-color: var(--clr-accent);
+  display: none;
+  z-index: 200;
+  position: absolute;
+  top: 110%;
 }
 
 @media (max-width: 479px) {
