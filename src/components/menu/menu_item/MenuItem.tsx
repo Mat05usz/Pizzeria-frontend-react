@@ -1,8 +1,9 @@
 import "./menuitem.scss";
-import { useEffect, useRef, MutableRefObject } from 'react';
+import { useEffect, useRef, MutableRefObject } from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import { ItemDetails } from "../../../interfaces/ItemDetails";
+import { gsap } from "gsap";
 
 interface MenuItemProps {
   key?: number;
@@ -18,6 +19,7 @@ function MenuItem(props: MenuItemProps) {
     triggerOnce: true,
   });
 
+  let menuItemRef = useRef<HTMLDivElement>(null);
   let buttonRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -25,41 +27,54 @@ function MenuItem(props: MenuItemProps) {
   }, [inView]);
 
   return (
-    <div
-      ref={ref}
-      className="menu-item"
-      onMouseOver={() => {
-        if(buttonRef.current)
-          buttonRef.current.style.display = "block"; 
-      }}
-      onMouseLeave={()=>{
-        if(buttonRef.current)
-          buttonRef.current.style.display = "none"; 
-      }}
-    >
-      <img
-        src={`data:image/jpeg;base64,${props.itemDetails.image}`}
-        alt="img"
-        className="menu-item-image"
-        style={{ border: "none" }}
-      ></img>
+    <div className="menu-item-wrapper">
+      <div
+        ref={menuItemRef}
+        className="menu-item"
+        onMouseOver={() => {
+          menuItemRef.current!.style.position = "absolute";
+          menuItemRef.current!.style.zIndex = "100";
+          gsap.to(buttonRef.current, {
+            maxHeight: "200px",
+            duration: 1.5,
+            overwrite: "auto",
+          });
+        }}
+        onMouseLeave={() => {
+          gsap.to(buttonRef.current, {
+            onComplete: () => {
+              menuItemRef.current!.style.position = "relative";
+              menuItemRef.current!.style.zIndex = "0";
+            },
+            maxHeight: "0px",
+            duration: 0.5,
+            overwrite: "auto",
+          });
+        }}
+      >
+        <img
+          src={`data:image/jpeg;base64,${props.itemDetails.image}`}
+          alt="img"
+          className="menu-item-image"
+          style={{ border: "none" }}
+        ></img>
 
-      <div className="menu-item-content">
-        <h2 className="menu-item-name">
-          {props.itemDetails.name || "Margherita"}
-        </h2>
-        <p className="menu-item-desc">
-          {props.itemDetails.description ||
-            `Lorem
+        <div className="menu-item-content">
+          <h2 className="menu-item-name">
+            {props.itemDetails.name || "Margherita"}
+          </h2>
+          <p className="menu-item-desc">
+            {props.itemDetails.description ||
+              `Lorem
           ipsum dolor sit amet consectetur adipisicing elit. Animi, aliquid?`}
-        </p>
-        <span className="menu-item-price-value">
-          {props.itemDetails.price || "19.99"}$
-        </span>
+          </p>
+          <span className="menu-item-price-value">
+            {props.itemDetails.price || "19.99"}$
+          </span>
 
-        {props.children}
+          {props.children}
 
-        {/*<Link
+          {/*<Link
             to={`/item/${props.itemDetails.name}`}
             state={{
               itemDetails: props.itemDetails
@@ -67,13 +82,13 @@ function MenuItem(props: MenuItemProps) {
             className="menu-item-details-button"
           >
             <p>Details</p>
-          </Link>*/
-}
-
-        <div ref={buttonRef} className="menu-item-order-button">
-          <p>Order</p>
+          </Link>*/}
+          <div ref={buttonRef} className="button-container">
+            <div className="menu-item-order-button">
+              <p>Order</p>
+            </div>
+          </div>
         </div>
-          
       </div>
     </div>
   );

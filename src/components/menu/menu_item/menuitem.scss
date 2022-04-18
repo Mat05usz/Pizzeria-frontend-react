@@ -1,6 +1,12 @@
+.menu-item-wrapper{
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  position: relative;
+}
+
 .menu-item {
   display: flex;
-  position: relative;
   transition: all 200ms ease;
   flex-direction: column;
   justify-content: center;
@@ -24,6 +30,7 @@
   transform: scale(1.02);
 }
 
+
 .menu-item-image {
   width: 100%;
   max-width: 300px;
@@ -46,6 +53,18 @@
   &:hover{
     height: 120%;
   }
+}
+
+
+.button-container{
+  z-index: 200;
+  position: relative;
+  width: 100%;
+  //transition: all 2000ms ease;
+  max-height: 0;
+  height: 100%;
+ // display: none;
+  overflow-y: hidden;
 }
 
 .menu-item-name {
@@ -95,10 +114,7 @@
 .menu-item-order-button {
   align-self: center;
   background-color: var(--clr-accent);
-  display: none;
-  z-index: 200;
-  position: absolute;
-  top: 110%;
+  //top: 110%;
 }
 
 @media (max-width: 479px) {
