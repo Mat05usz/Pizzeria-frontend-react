@@ -1,11 +1,11 @@
 import "../index.css";
-import Nav from "./Nav";
-import Main from "./Main";
-import Footer from "./Footer";
-import NotFound from "./NotFound";
-import AddProduct from "./AddProduct";
+import Nav from "./nav/Nav";
+import Main from "./main/Main";
+import Footer from "./footer/Footer";
+import NotFound from "./not_found/NotFound";
+import AddProduct from "./management/AddProduct";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ItemDetailed from "./ItemDetailed";
+import ItemDetailed from "./menu/menu_item/ItemDetailed";
 
 function App() {
   return (
