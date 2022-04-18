@@ -9,6 +9,9 @@ Currently about 50% of planned content is in. Most of the design is done (altoug
 looks like) as well as a 'skeleton' for the content. It's already mostly responsive so should look fine on mobile devices.
 
 ## Live
+
+Live currently not working due to Heroku removing OAuth with Github, making it impossible to update the production branch from github (and frankly, since I've wanted to switch hosting anyways for quite some time now, I won't be dealing with Heroku CLI to deploy).
+
 https://pizzeria-react-frontend.herokuapp.com/
 
 ## Images
