@@ -32,21 +32,26 @@ function MenuItem(props: MenuItemProps) {
         ref={menuItemRef}
         className="menu-item"
         onMouseOver={() => {
-          menuItemRef.current!.style.position = "absolute";
           menuItemRef.current!.style.zIndex = "100";
           gsap.to(buttonRef.current, {
+            onStart: () => {
+              menuItemRef.current!.style.position = "absolute";
+            },
             maxHeight: "200px",
-            duration: 1.5,
+            duration: 2,
             overwrite: "auto",
           });
         }}
         onMouseLeave={() => {
           gsap.to(buttonRef.current, {
-            onComplete: () => {
-              menuItemRef.current!.style.position = "relative";
+            onStart: () => {
               menuItemRef.current!.style.zIndex = "0";
             },
+            onComplete: () => {
+              menuItemRef.current!.style.position = "relative";
+            },
             maxHeight: "0px",
+            paddingBottom: "0",
             duration: 0.5,
             overwrite: "auto",
           });
