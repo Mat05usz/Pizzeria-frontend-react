@@ -9,19 +9,22 @@ Currently about 50% of planned content is in. Most of the design is done (altoug
 looks like) as well as a 'skeleton' for the content. It's already mostly responsive so should look fine on mobile devices.
 
 ## Live
+
+Live currently not working due to Heroku removing OAuth with Github, making it impossible to update the production branch from github (and frankly, since I've wanted to switch hosting anyways for quite some time now, I won't be dealing with Heroku CLI to deploy).
+
 https://pizzeria-react-frontend.herokuapp.com/
 
 ## Images
 
 Keep in mind that this is still a work in progress.
 
-![image](https://user-images.githubusercontent.com/29757616/163269277-1bc64542-5106-43c1-858f-a31a9aba5600.png)
+![image](https://user-images.githubusercontent.com/29757616/163853629-efd5264d-7bd3-46ab-8ef2-9a8c752def93.png)
 
-![image](https://user-images.githubusercontent.com/29757616/163269338-199a70b0-f349-49b4-8840-e7e0cd57374c.png)
+![image](https://user-images.githubusercontent.com/29757616/163853704-4167aa09-ac0b-4f8d-af61-e69fa9448fcc.png)
 
-![image](https://user-images.githubusercontent.com/29757616/163269395-08368294-6004-48d8-a4b9-ac138d0f2bde.png)
+![image](https://user-images.githubusercontent.com/29757616/163853734-e79872c6-bc13-45ae-bc36-ac8b8cabfa79.png)
 
-![image](https://user-images.githubusercontent.com/29757616/163269442-e304b59b-bdb9-4fb3-975e-2918a666fa0c.png)
+![image](https://user-images.githubusercontent.com/29757616/163853553-a6e9f5b3-8df8-4683-937d-23da0de44720.png)
 
 ![image](https://user-images.githubusercontent.com/29757616/163269477-5d2489a5-41b0-4615-9e75-74e941204d6e.png)
 
