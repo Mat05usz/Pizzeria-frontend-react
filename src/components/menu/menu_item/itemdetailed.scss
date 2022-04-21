@@ -40,15 +40,13 @@
 
   .menu-item-name {
     font-size: clamp(2rem, 5vw, 2.5rem);
-    color: var(--clr-accent);
     font-weight: 500;
   }
   .menu-item-desc{
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   .item-detailed-price {
     font-size: 2rem;
-    font-weight: 500;
   }
   .menu-item-price-value {
     display: none;
@@ -70,7 +68,7 @@
     justify-content: center;
     gap: 1.5rem;
   }
-  .menu-item-details-button
+  .button-container
   {
     display: none;
   }
