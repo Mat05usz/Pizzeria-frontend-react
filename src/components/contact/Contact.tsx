@@ -1,5 +1,6 @@
 import "./contact.scss";
 import SectionTitle from "../section_title/SectionTitle";
+import SocialMediaLinks from "../social_media_links/SocialMediaLinks";
 
 function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
@@ -17,26 +18,10 @@ function Contact() {
           <p className="contact-content-email">
             <span className="highlight">E-mail: </span> pizza@pizza.com
           </p>
-
-          <div className="social-media">
-            <p>
-              or find us on <span className="highlight">social media:</span>
-            </p>
-            <div className="social-media-links">
-              <img
-                src={"images/twitter_icon.png"}
-                alt="Twitter social media link"
-              />
-              <img
-                src={"images/facebook_icon.png"}
-                alt="Facebook social media link"
-              />
-              <img
-                src={"images/youtube_icon.png"}
-                alt="Youtube social media link"
-              />
-            </div>
-          </div>
+          <p className="contact-content-media">
+            or find us on <span className="highlight">social media</span>
+          </p>
+          <SocialMediaLinks />
         </div>
         <div className="contact-form">
           <form
