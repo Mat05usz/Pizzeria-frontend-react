@@ -49,7 +49,7 @@ export default function ItemDetailed() {
   }, []);
 
   return (
-    <>
+    <section className="item-detailed-wrapper">
       {itemDetails && (
         <MenuItem
           itemDetails={itemDetails}
@@ -66,6 +66,6 @@ export default function ItemDetailed() {
           }
         ></MenuItem>
       )}
-    </>
+    </section>
   );
 }
