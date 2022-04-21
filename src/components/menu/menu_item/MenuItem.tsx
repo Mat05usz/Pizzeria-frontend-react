@@ -32,6 +32,8 @@ function MenuItem(props: MenuItemProps) {
         ref={menuItemRef}
         className="menu-item"
         onMouseOver={() => {
+          if (props.children) return;
+          
           menuItemRef.current!.style.zIndex = "100";
           gsap.to(buttonRef.current, {
             onStart: () => {
@@ -43,6 +45,8 @@ function MenuItem(props: MenuItemProps) {
           });
         }}
         onMouseLeave={() => {
+          if (props.children) return;
+
           gsap.to(buttonRef.current, {
             onStart: () => {
               menuItemRef.current!.style.zIndex = "0";
@@ -79,19 +83,16 @@ function MenuItem(props: MenuItemProps) {
 
           {props.children}
 
-          {/*<Link
-            to={`/item/${props.itemDetails.name}`}
-            state={{
-              itemDetails: props.itemDetails
-            }}
-            className="menu-item-details-button"
-          >
-            <p>Details</p>
-          </Link>*/}
           <div ref={buttonRef} className="button-container">
-            <div className="menu-item-order-button">
+            <Link
+              to={`/item/${props.itemDetails.name}`}
+              state={{
+                itemDetails: props.itemDetails,
+              }}
+              className="menu-item-order-button"
+            >
               <p>Order</p>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
